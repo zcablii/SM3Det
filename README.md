@@ -20,6 +20,12 @@ Main configuration files are put under configs/SM3Det/
 
 ![Main_results](docs/results.png)
 
+-----
+
+![vis](docs/vis.png)
+
+-----
+
 <table><thead>
   <tr>
     <th>Model</th>
@@ -96,8 +102,6 @@ Main configuration files are put under configs/SM3Det/
   </tr>
 </tbody></table>
 
-
-![vis](docs/vis.png)
 
 
 
