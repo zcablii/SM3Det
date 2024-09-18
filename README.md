@@ -1,62 +1,133 @@
 
-![lsk_arch](docs/lsk.png)
+![net_arch](docs/lsk.png)
 
-[![PWC](http://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/large-selective-kernel-network-for-remote/object-detection-in-aerial-images-on-dota-1)](https://paperswithcode.com/sota/object-detection-in-aerial-images-on-dota-1?p=large-selective-kernel-network-for-remote)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/large-selective-kernel-network-for-remote/oriented-object-detection-on-dota-1-0)](https://paperswithcode.com/sota/oriented-object-detection-on-dota-1-0?p=large-selective-kernel-network-for-remote)
-[![PWC](http://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/large-selective-kernel-network-for-remote/object-detection-in-aerial-images-on-hrsc2016)](https://paperswithcode.com/sota/object-detection-in-aerial-images-on-hrsc2016?p=large-selective-kernel-network-for-remote)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/large-selective-kernel-network-for-remote/semantic-segmentation-on-uavid)](https://paperswithcode.com/sota/semantic-segmentation-on-uavid?p=large-selective-kernel-network-for-remote)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/large-selective-kernel-network-for-remote/semantic-segmentation-on-isprs-vaihingen)](https://paperswithcode.com/sota/semantic-segmentation-on-isprs-vaihingen?p=large-selective-kernel-network-for-remote)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/large-selective-kernel-network-for-remote/semantic-segmentation-on-isprs-potsdam)](https://paperswithcode.com/sota/semantic-segmentation-on-isprs-potsdam?p=large-selective-kernel-network-for-remote)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/large-selective-kernel-network-for-remote/semantic-segmentation-on-loveda)](https://paperswithcode.com/sota/semantic-segmentation-on-loveda?p=large-selective-kernel-network-for-remote)
-
-## This repository is the official implementation of ICCV 2023 "Large Selective Kernel Network for Remote Sensing Object Detection" at: [ICCV Open Access](https://openaccess.thecvf.com/content/ICCV2023/papers/Li_Large_Selective_Kernel_Network_for_Remote_Sensing_Object_Detection_ICCV_2023_paper.pdf)
+## This repository is the official implementation of ArXiv "SM3Det: A Single Remote Sensing Object Detection Model for Multi-Modal Datasets and Multi-Task Joint Training" at: [Here]( )
 
 ## Abstract
 
-
-Recent research on remote sensing object detection has largely focused on improving the representation of oriented bounding boxes but has overlooked the unique prior knowledge presented in remote sensing scenarios. Such prior knowledge can be useful because tiny remote sensing objects may be mistakenly detected without referencing a sufficiently long-range context, and the long-range context required by different types of objects can vary. In this paper, we take these priors into account and propose the Large Selective Kernel Network (LSKNet). LSKNet can dynamically adjust its large spatial receptive field to better model the ranging context of various objects in remote sensing scenarios. To the best of our knowledge, this is the first time that large and selective kernel mechanisms have been explored in the field of remote sensing object detection. Without bells and whistles, our lightweight LSKNet sets new state-of-the-art scores on standard remote sensing classification, object detection and semantic segmentation benchmarks. Based on a similar technique, we rank 2nd place in 2022 the Greater Bay Area International Algorithm Competition
+With the rapid advancement of remote sensing technology, high-resolution, multi-modal imagery is now more widely accessible. Traditionally, object detection models are trained on a single dataset, often restricted to a specific imaging modality. However, real-world applications increasingly demand a more versatile approach—one capable of detecting objects across diverse modalities. This paper introduces a new task called Multi-Modal Datasets and Multi-Task Object Detection (M3Det) for remote sensing, designed to accurately detect horizontal or oriented objects from any sensor modality. This task poses challenges due to the trade-offs involved in managing multi-modal data and the complexities of multi-task optimization. To address these, we establish a benchmark dataset and propose a unified model, SM3Det (Single Model for Multi-Modal datasets and Multi-Task object Detection) in remote sensing images. SM3Det leverages a sparse MoE backbone, allowing for joint knowledge learning while enabling distinct feature representation for different modalities. It also employs a dynamic optimization strategy to manage varying learning difficulties across tasks and modalities. Extensive experiments demonstrate the effectiveness and generalizability of SM3Det, consistently outperforming individual models on each dataset. 
 
 ## Introduction
 
-This repository is the official implementation of ICCV 2023 "Large Selective Kernel Network for Remote Sensing Object Detection" at: [ICCV Open Access](https://openaccess.thecvf.com/content/ICCV2023/papers/Li_Large_Selective_Kernel_Network_for_Remote_Sensing_Object_Detection_ICCV_2023_paper.pdf)
+## This repository is the official implementation of ArXiv "SM3Det: A Single Remote Sensing Object Detection Model for Multi-Modal Datasets and Multi-Task Joint Training" at: [Here]( )
 
 The master branch is built on MMRotate which works with **PyTorch 1.6+**.
 
-LSKNet backbone code is placed under mmrotate/models/backbones/, and the train/test configure files are placed under configs/lsknet/ 
+Main configuration files are put under configs/SM3Det/
 
 
 ## Results and models
 
-Imagenet 300-epoch pre-trained LSKNet-T backbone: [Download](https://liveuclac-my.sharepoint.com/:u:/g/personal/zcablii_ucl_ac_uk/EQ_R312q8ihJg1CSwhm80kgBNrxi1CRyLN8vXjF_lAszcA?e=fftQcx)
+![Main_results](docs/results.png)
 
-Imagenet 300-epoch pre-trained LSKNet-S backbone: [Download](https://liveuclac-my.sharepoint.com/:u:/g/personal/zcablii_ucl_ac_uk/EYQMJzI0z0JEtCc-ebVWHbgBftwi0IltLMrbEoQT0qiSzw?e=hm1xKs)
+<table><thead>
+  <tr>
+    <th>Model</th>
+    <th>FLOPs</th>
+    <th>#P</th>
+    <th>Test on</th>
+    <th>mAP</th>
+    <th>@50</th>
+    <th>@75</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>3 models</td>
+    <td>403G</td>
+    <td>126M</td>
+    <td>Overall</td>
+    <td>48.23</td>
+    <td>79.39</td>
+    <td>51.26</td>
+  </tr>
+  <tr>
+    <td>GFL</td>
+    <td>131G</td>
+    <td>36M</td>
+    <td>\scriptsizeSARDet-50K</td>
+    <td>57.31</td>
+    <td>87.44</td>
+    <td>61.99</td>
+  </tr>
+  <tr>
+    <td>O-RCNN</td>
+    <td>136G</td>
+    <td>45M</td>
+    <td>\scriptsizeDOTA</td>
+    <td>45.31</td>
+    <td>77.70</td>
+    <td>46.45</td>
+  </tr>
+  <tr>
+    <td>O-RCNN</td>
+    <td>136G</td>
+    <td>45M</td>
+    <td>\scriptsizeDroneVehicle</td>
+    <td>46.09</td>
+    <td>74.78</td>
+    <td>52.79</td>
+  </tr>
+  <tr>
+    <td>Simple<br>Joint<br>Training</td>
+    <td>403G</td>
+    <td>66M</td>
+    <td>Overall</td>
+    <td>47.05</td>
+    <td>77.56</td>
+    <td>50.11</td>
+  </tr>
+  <tr>
+    <td>DA<br></td>
+    <td>403G</td>
+    <td>66M</td>
+    <td>Overall</td>
+    <td>48.37</td>
+    <td>79.76</td>
+    <td>51.66</td>
+  </tr>
+  <tr>
+    <td>UniDet<br></td>
+    <td>403G</td>
+    <td>66M</td>
+    <td>Overall</td>
+    <td>48.47</td>
+    <td>79.55</td>
+    <td>52.01</td>
+  </tr>
+  <tr>
+    <td>Uncertainty <br>loss</td>
+    <td>403G</td>
+    <td>66M</td>
+    <td>Overall</td>
+    <td>48.79</td>
+    <td>79.99</td>
+    <td>52.50</td>
+  </tr>
+  <tr>
+    <td>SM3Det <br>lightweighted</td>
+    <td>403G</td>
+    <td>66M</td>
+    <td>Overall</td>
+    <td>49.40</td>
+    <td>80.19</td>
+    <td>52.93</td>
+  </tr>
+  <tr>
+    <td>SM3Det</td>
+    <td>487G</td>
+    <td>178M</td>
+    <td>Overall</td>
+    <td>50.20</td>
+    <td>80.68</td>
+    <td>53.79</td>
+  </tr>
+</tbody></table>
 
-DOTA1.0
 
-|                           Model                            |  mAP  | Angle | lr schd | Batch Size |                                   Configs                                    |                                                               Download                                                               |     note     |
-| :--------------------------------------------------------: | :---: | :---: | :-----: | :--------: | :--------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------: | :----------: |
-| [RTMDet-l](https://arxiv.org/abs/2212.07784) (1024,1024,-) | 81.33 |   -   | 3x-ema  |     8      |                                      -                                       |                                                                  -                                                                   |  Prev. Best  |
-|                  LSKNet_T (1024,1024,200) + ORCNN          | 81.37 | le90  |   1x    |    2\*8    |     [lsk_t_fpn_1x_dota_le90](./configs/lsknet/lsk_t_fpn_1x_dota_le90.py)     | [model](https://download.openmmlab.com/mmrotate/v1.0/lsknet/lsk_t_fpn_1x_dota_le90/lsk_t_fpn_1x_dota_le90_20230206-3ccee254.pth) \| [log](https://download.openmmlab.com/mmrotate/v1.0/lsknet/lsk_t_fpn_1x_dota_le90/lsk_t_fpn_1x_dota_le90_20230206.log) |              |
-|                  LSKNet_S (1024,1024,200) + ORCNN          | 81.64 | le90  |   1x    |    1\*8    |   [lsk_s_fpn_1x_dota_le90](./configs/lsknet/lsk_s_fpn_1x_dota_le90.py)       | [model](https://download.openmmlab.com/mmrotate/v1.0/lsknet/lsk_s_fpn_1x_dota_le90/lsk_s_fpn_1x_dota_le90_20230116-99749191.pth) \| [log](https://download.openmmlab.com/mmrotate/v1.0/lsknet/lsk_s_fpn_1x_dota_le90/lsk_s_fpn_1x_dota_le90_20230116.log) |              |
-|                 LSKNet_S\* (1024,1024,200) + ORCNN         | 81.85 | le90  |   1x    |    1\*8    | [lsk_s_ema_fpn_1x_dota_le90](./configs/lsknet/lsk_s_ema_fpn_1x_dota_le90.py) | [model](https://download.openmmlab.com/mmrotate/v1.0/lsknet/lsk_s_ema_fpn_1x_dota_le90/lsk_s_ema_fpn_1x_dota_le90_20230212-30ed4041.pth) \| [log](https://download.openmmlab.com/mmrotate/v1.0/lsknet/lsk_s_ema_fpn_1x_dota_le90/lsk_s_ema_fpn_1x_dota_le90_20230212.log) | EMA Finetune |
-|                  LSKNet_S (1024,1024,200) + Roi_Trans      | 81.22 | le90  |   1x    |    2\*8    |   [lsk_s_roitrans_fpn_1x_dota](./configs/lsknet/lsk_s_roitrans_fpn_1x_dota.py)   | [model](https://pan.baidu.com/s/1OhK5juH__L9CeVKQoHFkDQ?pwd=lsks) \| [log](https://pan.baidu.com/s/1MQj0N9qcfPPWiZRlZ2Ad7A?pwd=lsks) |              |
-|                  LSKNet_S (1024,1024,200) + R3Det          | 80.08 | oc    |   1x    |    2\*8    |   [lsk_s_r3det_fpn_1x_dota](./configs/lsknet/lsk_s_r3det_fpn_1x_dota.py)   | [model](https://pan.baidu.com/s/186A8Q_j4lNxCp3JcEWy2Bw?pwd=lsks) \| [log](https://pan.baidu.com/s/1xN1GOg1qV7pqhlgUCk0FTQ?pwd=lsks) |              |
-|                  LSKNet_S (1024,1024,200) + S2ANet         | 81.32 | le135 |   1x    |    2\*8    |   [lsk_s_s2anet_fpn_1x_dota](./configs/lsknet/lsk_s_s2anet_fpn_1x_dota.py)   | [model](https://pan.baidu.com/s/1bQ41PBzK-OUQX_FYKDO32A?pwd=lsks) \| [log](https://pan.baidu.com/s/1Q4MtKVkyxmFrjW5SMEbTPQ?pwd=lsks) |              |
 
-FAIR1M-1.0
+![vis](docs/vis.png)
 
-|         Model         |  mAP  | Angle | lr schd | Batch Size |                                                    Configs                                                     |                                                                                                                                                                              Download     | note                                                                                                                                                                         |
-| :----------------------: | :---: | :---: | :-----: | :------: | :------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------: |
-| [O-RCNN](https://arxiv.org/abs/2108.05699) (1024,1024,200) | 45.60 | le90  |   1x    |    1*8     |  [oriented_rcnn_r50_fpn_1x_fair_le90](./configs/oriented_rcnn/oriented_rcnn_r50_fpn_1x_fair_le90.py)  |      -   | Prev. Best |
-| LSKNet_S (1024,1024,200) | 47.87 | le90  |   1x    |    1*8     |            [lsk_s_fpn_1x_dota_le90](./configs/lsknet/lsk_s_fpn_1x_dota_le90.py)             |         [model](https://pan.baidu.com/s/1sXyi23PhVwpuMRRdwsIJlQ?pwd=izs8) \| [log](https://pan.baidu.com/s/1idHq3--oyaWK3GWYqd8brQ?pwd=zznm)         | |
 
-HRSC2016 
-
-|                    Model                     | mAP(07) | mAP(12) | Angle | lr schd | Batch Size |                                      Configs                                      |                                                               Download                                                               |    note    |
-| :------------------------------------------: | :-----: | :-----: | :---: | :-----: | :--------: | :-------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------: | :--------: |
-| [RTMDet-l](https://arxiv.org/abs/2212.07784) |  90.60  |  97.10  | le90  |   3x    |     -      |                                         -                                         |                                                                  -                                                                   | Prev. Best |
-|  [ReDet](https://arxiv.org/abs/2103.07733)   |  90.46  |  97.63  | le90  |   3x    |    2\*4    | [redet_re50_refpn_3x_hrsc_le90](./configs/redet/redet_re50_refpn_3x_hrsc_le90.py) |                                                                  -                                                                   | Prev. Best |
-|                   LSKNet_S                   |  90.65  |  98.46  | le90  |   3x    |    1\*8    |       [lsk_s_fpn_3x_hrsc_le90](./configs/lsknet/lsk_s_fpn_3x_hrsc_le90.py)        | [model](https://download.openmmlab.com/mmrotate/v1.0/lsknet/lsk_s_fpn_3x_hrsc_le90/lsk_s_fpn_3x_hrsc_le90_20230205-4a4a39ce.pth) \| [log](https://download.openmmlab.com/mmrotate/v1.0/lsknet/lsk_s_fpn_3x_hrsc_le90/lsk_s_fpn_3x_hrsc_le90_20230205-4a4a39ce.pth) |            |
 
 ## Installation
 
@@ -71,8 +142,8 @@ conda install pytorch==1.8.0 torchvision==0.9.0 cudatoolkit=10.2 -c pytorch
 pip install -U openmim
 mim install mmcv-full
 mim install mmdet
-git clone https://github.com/zcablii/Large-Selective-Kernel-Network.git
-cd Large-Selective-Kernel-Network
+git clone https://github.com/zcablii/SM3Det.git
+cd SM3Det
 pip install -v -e .
 ```
 
@@ -86,12 +157,7 @@ We provide [colab tutorial](demo/MMRotate_Tutorial.ipynb), and other tutorials f
 - [customize dataset](docs/en/tutorials/customize_dataset.md)
 - [customize model](docs/en/tutorials/customize_models.md)
 - [useful tools](docs/en/tutorials/useful_tools.md)
-
-
-
-# LSKNet for Remote Sensing Segmentation
-
-We further extend our work to segmentation tasks on the Potsdam, Vaihingen, LoveDA, and UAVid datasets. Please visit [LSKNet + GeoSeg](https://github.com/zcablii/GeoSeg).
+ 
 
 
 ## Acknowledgement
