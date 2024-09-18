@@ -1,5 +1,5 @@
 
-![net_arch](docs/lsk.png)
+![net_arch](docs/SM3Det.png)
 
 ## This repository is the official implementation of ArXiv "SM3Det: A Single Remote Sensing Object Detection Model for Multi-Modal Datasets and Multi-Task Joint Training" at: [Here]( )
 
@@ -39,33 +39,6 @@ Main configuration files are put under configs/SM3Det/
     <td>48.23</td>
     <td>79.39</td>
     <td>51.26</td>
-  </tr>
-  <tr>
-    <td>GFL</td>
-    <td>131G</td>
-    <td>36M</td>
-    <td>\scriptsizeSARDet-50K</td>
-    <td>57.31</td>
-    <td>87.44</td>
-    <td>61.99</td>
-  </tr>
-  <tr>
-    <td>O-RCNN</td>
-    <td>136G</td>
-    <td>45M</td>
-    <td>\scriptsizeDOTA</td>
-    <td>45.31</td>
-    <td>77.70</td>
-    <td>46.45</td>
-  </tr>
-  <tr>
-    <td>O-RCNN</td>
-    <td>136G</td>
-    <td>45M</td>
-    <td>\scriptsizeDroneVehicle</td>
-    <td>46.09</td>
-    <td>74.78</td>
-    <td>52.79</td>
   </tr>
   <tr>
     <td>Simple<br>Joint<br>Training</td>
@@ -122,7 +95,6 @@ Main configuration files are put under configs/SM3Det/
     <td>53.79</td>
   </tr>
 </tbody></table>
-
 
 
 ![vis](docs/vis.png)
