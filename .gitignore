@@ -124,8 +124,7 @@ tmp
 mmrotate/.mim
 
 data
-cache
-*.png
+cache 
 *.jpg
 vis
 debug.py
