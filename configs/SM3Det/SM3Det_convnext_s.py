@@ -1,5 +1,5 @@
 _base_ = [
-    '../_base_/datasets/sardet_dota_ifred_multidata_multitask.py', '../_base_/schedules/schedule_1x.py',
+    '../_base_/datasets/SOI_Det.py', '../_base_/schedules/schedule_1x.py',
     '../_base_/default_runtime.py'
 ]
 
