@@ -1,7 +1,7 @@
 
 ![net_arch](docs/SM3Det.png)
 
-## This repository is the official implementation of ArXiv "SM3Det: A Single Remote Sensing Object Detection Model for Multi-Modal Datasets and Multi-Task Joint Training" at: [Here]( )
+## This repository is the official implementation of ArXiv "SM3Det: A Unified Model for Multi-Modal Datasets and Multi-Task Object Detection in Remote Sensing Imagery" at: [Here]( )
 
 ## Abstract
 
@@ -9,11 +9,16 @@ With the rapid advancement of remote sensing technology, high-resolution, multi-
 
 ## Introduction
 
-## This repository is the official implementation of ArXiv "SM3Det: A Single Remote Sensing Object Detection Model for Multi-Modal Datasets and Multi-Task Joint Training" at: [Here]( )
+## This repository is the official implementation of ArXiv "SM3Det: A Unified Model for Multi-Modal Datasets and Multi-Task Object Detection in Remote Sensing Imagery" at: [Here]( )
 
 The master branch is built on MMRotate which works with **PyTorch 1.6+**.
 
 Main configuration files are put under configs/SM3Det/
+
+
+**SOI-Det DATASET DOWNLOAD at:** 
+
+* [Dataset](https://www.kaggle.com/models/greatbird/doi-det) 
 
 
 ## Results and models
@@ -35,6 +40,8 @@ Main configuration files are put under configs/SM3Det/
     <th>mAP</th>
     <th>@50</th>
     <th>@75</th>
+    <th>config</th>
+    <th>log/ckpt</th>
   </tr></thead>
 <tbody>
   <tr>
@@ -45,6 +52,8 @@ Main configuration files are put under configs/SM3Det/
     <td>48.23</td>
     <td>79.39</td>
     <td>51.26</td>
+    <td><a href="local_configs/sardet50k_convnext_t_gfl.py"> 1 </a> <a href="local_configs/dota_convnext_t_orcnn.py"> 2 </a> <a href="local_configs/dronevehicle_convnext_t_orcnn.py"> 3 </a> </td>
+    <td><a href="https://www.kaggle.com/models/greatbird/sm3det"> here </a></td>
   </tr>
   <tr>
     <td>Simple<br>Joint<br>Training</td>
@@ -54,6 +63,8 @@ Main configuration files are put under configs/SM3Det/
     <td>47.05</td>
     <td>77.56</td>
     <td>50.11</td>
+    <td><a href="main_convnext_t_orcnn_gfl_simple_joint.py"> here </a></td>
+    <td><a href="https://www.kaggle.com/models/greatbird/sm3det"> here </a></td>
   </tr>
   <tr>
     <td>DA<br></td>
@@ -63,6 +74,8 @@ Main configuration files are put under configs/SM3Det/
     <td>48.37</td>
     <td>79.76</td>
     <td>51.66</td>
+    <td><a href="local_configs/main_DA_convnext_t_orcnn_gfl.py"> here </a></td>
+    <td><a href="https://www.kaggle.com/models/greatbird/sm3det"> here </a></td>
   </tr>
   <tr>
     <td>UniDet<br></td>
@@ -72,6 +85,8 @@ Main configuration files are put under configs/SM3Det/
     <td>48.47</td>
     <td>79.55</td>
     <td>52.01</td>
+    <td><a href="local_configs/main_unidet_convnext_t_orcnn_gfl.py"> here </a></td>
+    <td><a href="https://www.kaggle.com/models/greatbird/sm3det"> here </a></td>
   </tr>
   <tr>
     <td>Uncertainty <br>loss</td>
@@ -81,6 +96,8 @@ Main configuration files are put under configs/SM3Det/
     <td>48.79</td>
     <td>79.99</td>
     <td>52.50</td>
+    <td><a href="local_configs/main_uncertainty_convnext_t_orcnn_gfl.py"> here </a></td>
+    <td><a href="https://www.kaggle.com/models/greatbird/sm3det"> here </a></td>
   </tr>
   <tr>
     <td>SM3Det <br>lightweighted</td>
@@ -90,6 +107,8 @@ Main configuration files are put under configs/SM3Det/
     <td>49.40</td>
     <td>80.19</td>
     <td>52.93</td>
+    <td><a href="local_configs/main_SM3Det_convnext_t_orcnn_gfl_wo_moe.py"> here </a></td>
+    <td><a href="https://www.kaggle.com/models/greatbird/sm3det"> here </a></td>
   </tr>
   <tr>
     <td>SM3Det</td>
@@ -99,6 +118,8 @@ Main configuration files are put under configs/SM3Det/
     <td>50.20</td>
     <td>80.68</td>
     <td>53.79</td>
+    <td><a href="configs/SM3Det_convnext_t.py"> here </a></td>
+    <td><a href="https://www.kaggle.com/models/greatbird/sm3det"> here </a></td>
   </tr>
 </tbody></table>
 
