@@ -18,8 +18,7 @@ Main configuration files are put under configs/SM3Det/
 
 **SOI-Det DATASET DOWNLOAD at:** 
 
-* [Dataset](https://www.kaggle.com/models/greatbird/doi-det) 
-
+* [Dataset](https://www.kaggle.com/datasets/greatbird/soi-det) 
 
 ## Results and models
 
