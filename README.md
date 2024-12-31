@@ -1,7 +1,8 @@
-
-![net_arch](docs/SM3Det.png)
+![meme](docs/meme.png)
 
 ## This repository is the official implementation of ArXiv "[SM3Det: A Unified Model for Multi-Modal Remote Sensing Object Detection](http://arxiv.org/abs/2412.20665 )"
+
+![net_arch](docs/SM3Det.png)
 
 ## Abstract
 
