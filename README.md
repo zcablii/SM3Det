@@ -1,7 +1,7 @@
 
 ![net_arch](docs/SM3Det.png)
 
-## This repository is the official implementation of ArXiv "[SM3Det: A Unified Model for Multi-Modal Datasets and Multi-Task Object Detection in Remote Sensing Imagery](http://arxiv.org/abs/2412.20665 )"
+## This repository is the official implementation of ArXiv "[SM3Det: A Unified Model for Multi-Modal Remote Sensing Object Detection](http://arxiv.org/abs/2412.20665 )"
 
 ## Abstract
 
@@ -165,13 +165,11 @@ MMRotate is an open source project that is contributed by researchers and engine
 If you use this toolbox or benchmark in your research, please cite this project.
 
 ```bibtex
-@InProceedings{Li_2023_ICCV,
-    author    = {Li, Yuxuan and Hou, Qibin and Zheng, Zhaohui and Cheng, Ming-Ming and Yang, Jian and Li, Xiang},
-    title     = {Large Selective Kernel Network for Remote Sensing Object Detection},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
-    year      = {2023},
-    pages     = {16794-16805}
+@article{Li_2023_ICCV,
+    author    = {Li, Yuxuan and Li, Xiang and Li, Yunheng and Zhang Yicheng and Dai, Yimian and Hou, Qibin and Cheng, Ming-Ming and Yang, Jian},
+    title     = {SM3Det: A Unified Model for Multi-Modal Remote Sensing Object Detection},
+    journal = {arXiv},
+    year      = {2024}
 }
 ```
 
