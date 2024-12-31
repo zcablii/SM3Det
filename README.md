@@ -1,7 +1,7 @@
 
 ![net_arch](docs/SM3Det.png)
 
-## This repository is the official implementation of ArXiv "SM3Det: A Unified Model for Multi-Modal Datasets and Multi-Task Object Detection in Remote Sensing Imagery" at: [Here]( )
+## This repository is the official implementation of ArXiv "[SM3Det: A Unified Model for Multi-Modal Datasets and Multi-Task Object Detection in Remote Sensing Imagery](http://arxiv.org/abs/2412.20665 )"
 
 ## Abstract
 
