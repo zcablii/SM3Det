@@ -1,16 +1,14 @@
-![meme](docs/meme.png)
-
 ## This repository is the official implementation of ArXiv "[SM3Det: A Unified Model for Multi-Modal Remote Sensing Object Detection](http://arxiv.org/abs/2412.20665 )"
 
-![net_arch](docs/SM3Det.png)
+![meme](docs/meme.png)
+
+
 
 ## Abstract
 
 With the rapid advancement of remote sensing technology, high-resolution, multi-modal imagery is now more widely accessible. Traditionally, object detection models are trained on a single dataset, often restricted to a specific imaging modality. However, real-world applications increasingly demand a more versatile approach—one capable of detecting objects across diverse modalities. This paper introduces a new task called Multi-Modal Datasets and Multi-Task Object Detection (M3Det) for remote sensing, designed to accurately detect horizontal or oriented objects from any sensor modality. This task poses challenges due to the trade-offs involved in managing multi-modal data and the complexities of multi-task optimization. To address these, we establish a benchmark dataset and propose a unified model, SM3Det (Single Model for Multi-Modal datasets and Multi-Task object Detection) in remote sensing images. SM3Det leverages a sparse MoE backbone, allowing for joint knowledge learning while enabling distinct feature representation for different modalities. It also employs a dynamic optimization strategy to manage varying learning difficulties across tasks and modalities. Extensive experiments demonstrate the effectiveness and generalizability of SM3Det, consistently outperforming individual models on each dataset. 
 
-## Introduction
-
-## This repository is the official implementation of ArXiv "SM3Det: A Unified Model for Multi-Modal Datasets and Multi-Task Object Detection in Remote Sensing Imagery" at: [Here]( )
+![net_arch](docs/SM3Det.png)
 
 The master branch is built on MMRotate which works with **PyTorch 1.6+**.
 
