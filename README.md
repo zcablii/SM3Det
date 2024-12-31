@@ -6,9 +6,20 @@
 
 ## Abstract
 
-With the rapid advancement of remote sensing technology, high-resolution, multi-modal imagery is now more widely accessible. Traditionally, object detection models are trained on a single dataset, often restricted to a specific imaging modality. However, real-world applications increasingly demand a more versatile approach—one capable of detecting objects across diverse modalities. This paper introduces a new task called Multi-Modal Datasets and Multi-Task Object Detection (M3Det) for remote sensing, designed to accurately detect horizontal or oriented objects from any sensor modality. This task poses challenges due to the trade-offs involved in managing multi-modal data and the complexities of multi-task optimization. To address these, we establish a benchmark dataset and propose a unified model, SM3Det (Single Model for Multi-Modal datasets and Multi-Task object Detection) in remote sensing images. SM3Det leverages a sparse MoE backbone, allowing for joint knowledge learning while enabling distinct feature representation for different modalities. It also employs a dynamic optimization strategy to manage varying learning difficulties across tasks and modalities. Extensive experiments demonstrate the effectiveness and generalizability of SM3Det, consistently outperforming individual models on each dataset. 
+With the rapid advancement of remote sensing technology, high-resolution multi-modal imagery is now more widely accessible. Conventional Object detection models are trained on a single dataset, often restricted to a specific imaging modality and annotation format. However, such an approach overlooks the valuable shared knowledge across multi-modalities and limits the model's applicability in more versatile scenarios. This paper introduces a new task called Multi-Modal Datasets and Multi-Task Object Detection (M2Det) for remote sensing, designed to accurately detect horizontal or oriented objects from any sensor modality. This task poses challenges due to 1) the trade-offs involved in managing multi-modal modelling and 2) the complexities of multi-task optimization. To address these, we establish a benchmark dataset and propose a unified model, SM3Det (Single Model for Multi-Modal datasets and Multi-Task object Detection). SM3Det leverages a grid-level sparse MoE backbone to enable joint knowledge learning while preserving distinct feature representations for different modalities. Furthermore, it integrates a consistency and synchronization optimization strategy using dynamic learning rate adjustment, allowing it to effectively handle varying levels of learning difficulty across modalities and tasks. Extensive experiments demonstrate SM3Det's effectiveness and generalizability, consistently outperforming specialized models on individual datasets.
 
 ![net_arch](docs/SM3Det.png)
+
+## SM3Det Model 
+
+**Model Architecture:**
+
+- We propose integrating a plug-and-play grid-level sparse Mixture of Experts (MoE) architecture into backbone networks, enabling the model to capture both shared knowledge and modality-specific representations. Through dynamic routing, the experts operate on local spatial features, allowing the model to adaptively process information at a grid level, which is crucial for object detection tasks. 
+
+**Model Optimization:**
+
+- We propose a novel Dynamic Learning Rate Adjustment (DLA) method that adaptively adjusts the learning rates of different network components with tailored policies. DLA accommodates the varying learning complexities across different tasks and modalities by balancing the relative convergence rate and guaranteeing optimization direction consistency. 
+Unlike traditional techniques that primarily modify loss weights or gradients—often lacking precise manipulation over specific network submodules or suffering from inefficiencies—our DLA provides fine-grained control while maintaining optimization efficiency.
 
 The master branch is built on MMRotate which works with **PyTorch 1.6+**.
 
