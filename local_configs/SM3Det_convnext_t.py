@@ -9,13 +9,13 @@ fp16 = dict(loss_scale='dynamic')
 num_classes=26
 source_ratio = [2,1,1]
 model = dict(
-    type='TriSourceDetector', 
+    type='TriSourceDetector',
     backbone=dict(
         type='ConvNeXt_moe_MultiInput',
-        MoE_Block_inds = [[],[],[i*2 for i in range(5)],[0,2]],
+        MoE_Block_inds=[[], [0, 2], [i*2 for i in range(5)], [0, 2]],
         datasets=None,
-        num_experts= 8, 
-        top_k= 3,
+        num_experts=8,
+        top_k=2,
         arch='tiny',
         drop_path_rate=0.1,
         init_cfg=dict(type='Pretrained', prefix='backbone', checkpoint='../data/pretrained/convnext-tiny.pth')),
