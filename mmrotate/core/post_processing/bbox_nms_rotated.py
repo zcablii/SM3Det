@@ -55,7 +55,9 @@ def multiclass_nms_rotated(multi_bboxes,
         scores = scores * score_factors
 
     inds = valid_mask.nonzero(as_tuple=False).squeeze(1)
-    bboxes, scores, labels = bboxes[inds], scores[inds], labels[inds]
+    bboxes = bboxes[inds.to(bboxes.device)]
+    scores = scores[inds.to(scores.device)]
+    labels = labels[inds.to(labels.device)] 
 
     if bboxes.numel() == 0:
         dets = torch.cat([bboxes, scores[:, None]], -1)
@@ -84,7 +86,8 @@ def multiclass_nms_rotated(multi_bboxes,
 
     bboxes = bboxes[keep]
     scores = scores[keep]
-    labels = labels[keep]
+
+    labels = labels[keep.to(labels.device)]
 
     if return_inds:
         return torch.cat([bboxes, scores[:, None]], 1), labels, keep
