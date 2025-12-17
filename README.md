@@ -175,11 +175,11 @@ MMRotate is an open source project that is contributed by researchers and engine
 If you use this toolbox or benchmark in your research, please cite this project.
 
 ```bibtex
-@article{Li_2024_sm3det,
+@inproceedings{Li_2026_sm3det,
     author    = {Li, Yuxuan and Li, Xiang and Li, Yunheng and Zhang Yicheng and Dai, Yimian and Hou, Qibin and Cheng, Ming-Ming and Yang, Jian},
     title     = {SM3Det: A Unified Model for Multi-Modal Remote Sensing Object Detection},
-    journal = {arXiv},
-    year      = {2024}
+    booktitle = {AAAI},
+    year      = {2026}
 }
 ```
 
