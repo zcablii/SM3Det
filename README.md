@@ -1,4 +1,4 @@
-## This repository is the official implementation of ArXiv "[SM3Det: A Unified Model for Multi-Modal Remote Sensing Object Detection](http://arxiv.org/abs/2412.20665 )"
+## This repository is the official implementation of [AAAI26 Oral] "[SM3Det: A Unified Model for Multi-Modal Remote Sensing Object Detection](http://arxiv.org/abs/2412.20665 )"
 
 ![meme](docs/meme.png)
 
