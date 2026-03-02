@@ -1,0 +1,1 @@
+GPUS=8 PER_DEVICE_BATCH_SIZE=1 sh babelrs_configs/BabelRS_internvl_1b_20ksteps.sh

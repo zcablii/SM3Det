@@ -1,0 +1,6 @@
+run2.sh
+work_dirs*
+results
+*config
+instruct_jsonl
+**__pycache__**

@@ -1,0 +1,190 @@
+{
+  "infrared_instruct": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/cls_vqa/ir_instruct.jsonl",
+    "data_augment": false,
+    "repeat_time": 3,
+    "length": 51761,
+    "max_dynamic_patch": 6
+  },
+  
+  "SARLang": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/cls_vqa/SARLang.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.6,
+    "length": 1125726,
+    "max_dynamic_patch": 6
+  },
+
+  "caption_cd_rgb_LevirCCcaptions": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/cls_vqa/caption_cd_rgb_LevirCCcaptions.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.2,
+    "length": 50385,
+    "max_dynamic_patch": 6
+  },
+  "caption_GAIA_trainval_instruct": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/cls_vqa/caption_GAIA_trainval_instruct.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 32832,
+    "max_dynamic_patch": 6
+  },
+  "cls_rgb_Million-AID": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/cls_vqa/cls_rgb_Million-AID.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.001,
+    "length": 920057,
+    "max_dynamic_patch": 6
+  },
+  "cls_rgb_Million-AID_CoT": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/cls_vqa/cls_rgb_Million-AID_CoT.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.05,
+    "length": 920057,
+    "max_dynamic_patch": 6
+  },
+  "cls_sar_ISPRS_SAR_classification": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/cls_vqa/cls_sar_ISPRS_SAR_classification.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 1500,
+    "max_dynamic_patch": 6
+  },
+  "cls_sar_Sentinel-1&2_Image_Pairs": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/cls_vqa/cls_sar_Sentinel-1&2_Image_Pairs.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 16000,
+    "max_dynamic_patch": 6
+  },
+  "vqa_rgb_MSAR": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/cls_vqa/vqa_rgb_MSAR.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 200,
+    "max_dynamic_patch": 6
+  },
+  "cls_rgb_NWPU-RESISC45": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/mini_internVL/geochat/cls_rgb_NWPU-RESISC45.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.1,
+    "length": 31500
+  },
+  "vqa_panc_dota": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/mini_internVL/geochat/vqa_panc_dota.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 3920
+  },
+
+  "geochat_train": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/CoT_jsonl/geochat_train.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 63883,
+    "max_dynamic_patch": 6
+  },
+  "vrsbench_train": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/CoT_jsonl/vrsbench_train.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 38689,
+    "max_dynamic_patch": 6
+  },
+  "dior_rsvg_train": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/CoT_jsonl/dior_rsvg_train.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length": 27133,
+    "max_dynamic_patch": 6
+  },
+
+  "FIT_RS_Instruct_VQA_100k": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/mini_internVL/fit_rs_vqa_100k.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.2,
+    "length": 99999,
+    "max_dynamic_patch": 6
+  },
+  "vqa_rgb_rsvqahr_train_instruct_100k":{
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/mini_internVL/vqa_rgb_rsvqahr_train_instruct_100k.jsonl",
+    "data_augment": false,
+    "repeat_time": 1,
+    "length":100000,
+    "max_dynamic_patch": 6    
+  },
+
+  
+  "sharegpt4v_instruct_gpt4-vision_cap100k": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/mini_internVL/sharegpt4v_instruct_gpt4-vision_cap100k.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.1,
+    "length": 102025
+  },
+  "sharegpt4v_mix665k_cap23k_coco-ap9k_lcs3k_sam9k_div2k_novg": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/mini_internVL/sharegpt4v_mix665k_cap23k_coco-ap9k_lcs3k_sam9k_div2k_novg.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.05,
+    "length": 578326
+  },
+  "dvqa_train_200k": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/mini_internVL/dvqa_train_200k.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.01,
+    "length": 200000
+  },
+  "chartqa_train_18k": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/mini_internVL/chartqa_train_18k.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.01,
+    "length": 18317
+  },
+  "ai2d_train_12k": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/mini_internVL/ai2d_train_12k.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.01,
+    "length": 12413
+  },
+  "docvqa_train_10k": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/mini_internVL/docvqa_train_10k.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.01,
+    "length": 10211
+  },
+  "geoqa+": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/mini_internVL/geoqa+.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.01,
+    "length": 72318
+  },
+  "synthdog_en": {
+    "root": "BabelRS_data/",
+    "annotation": "instruct_jsonl/mini_internVL/synthdog_en.jsonl",
+    "data_augment": false,
+    "repeat_time": 0.01,
+    "length": 29765 
+  }
+}
