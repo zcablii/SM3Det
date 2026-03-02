@@ -233,7 +233,7 @@ If you use this toolbox or benchmark in your research, please cite this project.
 ```
 
 ```bibtex
-@inproceedings{Li_2026_sm3det,
+@inproceedings{Li_2026_babelrs,
     author    = {Li, Yuxuan and Chen, Yuming and Li, Yunheng and Ming-Ming and Li, Xiang and Yang, Jian},
     title     = {Unifying Heterogeneous Multi-Modal Remote Sensing Detection Via Language-Pivoted Pretraining},
     booktitle = {Arxiv},
