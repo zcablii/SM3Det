@@ -3,7 +3,7 @@
 ![meme](docs/meme.png)
 
 
-## [Unifying Heterogeneous Multi-Modal Remote Sensing Detection Via language-pivoted pretraining](https://github.com/zcablii/SM3Det/blob/main/docs/BabelRS.pdf)
+## [Unifying Heterogeneous Multi-Modal Remote Sensing Detection Via language-pivoted pretraining](https://arxiv.org/pdf/2603.01758)
 
 Heterogeneous multi-modal remote sensing object detection aims to accurately detect objects from diverse sensors (e.g., RGB, SAR, Infrared). Existing approaches largely adopt a late alignment paradigm, in which modality alignment and task-specific optimization are entangled during downstream fine-tuning. This tight coupling complicates optimization and often results in unstable training and suboptimal generalization. To address these limitations, we propose BabelRS, a unified language-pivoted pretraining framework that explicitly decouples modality alignment from downstream task learning. BabelRS comprises two key components: Concept-Shared Instruction Aligning (CSIA) and Layerwise Visual-Semantic Annealing (LVSA). CSIA aligns each sensor modality to a shared set of linguistic concepts, using language as a semantic pivot to bridge heterogeneous visual representations. To further mitigate the granularity mismatch between high-level language representations and dense detection objectives, LVSA progressively aggregates multiscale visual features to provide fine-grained semantic guidance. Extensive experiments demonstrate that BabelRS stabilizes training and consistently outperforms state-of-the-art methods without bells and whistles.
 
